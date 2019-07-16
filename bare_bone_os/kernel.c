@@ -72,7 +72,7 @@ void term_initialize(void)
 {
 	term_row = 0;
 	term_column = 0;
-	term_color = make_color(COLOR_LIGHT_GREY, COLOR_BLACK);
+	term_color = make_color(COLOR_LIGHT_GREEN, COLOR_DARK_GREY);
 	term_buffer = (uint16_t*) 0xB8000;
 
 	for(size_t y = 0; y < VGA_HEIGHT; y++)
