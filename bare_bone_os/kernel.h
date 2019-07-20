@@ -101,7 +101,7 @@ void init_term(void)
 		for(size_t x = 0; x < VGA_WIDTH; x++)
 		{
 			const size_t index = y * VGA_WIDTH + x;
-			term_buffer[index] = make_vgaentry(' ', random_color());
+			term_buffer[index] = make_vgaentry(' ', term_color);
 		}
 	}
 }
