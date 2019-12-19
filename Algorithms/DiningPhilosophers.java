@@ -19,8 +19,7 @@ public class DiningPhilosophers {
                 philosophers[i] = new Philosopher(leftFork, rightFork);
             }
 
-            Thread t
-                    = new Thread(philosophers[i], "Philosopher " + (i + 1));
+            Thread t = new Thread(philosophers[i], "Philosopher " + (i + 1));
             t.start();
         }
     }
@@ -36,8 +35,7 @@ class Philosopher implements Runnable {
     }
 
     private void doAction(String action) throws InterruptedException {
-        System.out.println(
-                Thread.currentThread().getName() + " " + action);
+        System.out.println(Thread.currentThread().getName() + " " + action);
         Thread.sleep(((int) (Math.random() * 100)));
     }
 
@@ -49,24 +47,14 @@ class Philosopher implements Runnable {
                 // thinking
                 doAction(System.nanoTime() + ": Thinking");
                 synchronized (leftFork) {
-                    doAction(
-                            System.nanoTime()
-                                    + ": Picked up left fork");
+                    doAction(System.nanoTime() + ": Picked up left fork");
                     synchronized (rightFork) {
                         // eating
-                        doAction(
-                                System.nanoTime()
-                                        + ": Picked up right fork - eating");
-
-                        doAction(
-                                System.nanoTime()
-                                        + ": Put down right fork");
+                        doAction(System.nanoTime() + ": Picked up right fork - eating");
+                        doAction(System.nanoTime() + ": Put down right fork");
                     }
-
                     // Back to thinking
-                    doAction(
-                            System.nanoTime()
-                                    + ": Put down left fork. Back to thinking");
+                    doAction(System.nanoTime() + ": Put down left fork. Back to thinking");
                 }
             }
         } catch (InterruptedException e) {
