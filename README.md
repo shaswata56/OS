@@ -1,17 +1,16 @@
-# Operating System
+Operating System
 
-## Bare_Bone OS
+## microOS
 I've written this minimal Kernel & OS by following the OSDev tutorial.
-
-You can easily run microOS under quemu / burn on a usb and test it on metal.
+It can be easily run under qemu / burn on a usb and test it on bare metal.
 For Qemu:
 
-```bash
+```sh
     qemu-system-i386 -cdrom microOS.iso
 ```
 
 or,
 
-```bash
+```sh
     qemu-system-i386 -kernel microOS.bin
 ```
