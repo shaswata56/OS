@@ -1,7 +1,6 @@
 Operating System
 
-![Screenshot]
-(https://raw.githubusercontent.com/shaswata56/OS/master/Operating_System_CourseWork/res/screen.png)
+![Screenshot](https://raw.githubusercontent.com/shaswata56/OS/master/Operating_System_CourseWork/res/screen.png)
 
 ## microOS
 I've written this minimal Kernel & OS by following the OSDev tutorial.
